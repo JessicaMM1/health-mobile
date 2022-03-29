@@ -88,7 +88,7 @@ function BottomTabNavigator() {
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: 'Personal Info',
+          title: 'My Info',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
       />
