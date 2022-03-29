@@ -7,7 +7,8 @@ import { Text, View } from '../components/Themed';
 export default function ModalScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Modal</Text>
+      <Text style={styles.title}>Modal 1 Hello</Text>
+      {/* <Greeting name='Jessica' /> */}
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/ModalScreen.tsx" />
 
@@ -16,6 +17,15 @@ export default function ModalScreen() {
     </View>
   );
 }
+
+
+// const Greeting = (props: any) => {
+//   return (
+//     <View style={styles.greeting}>
+//       <Text>Hello {props.name}!</Text>
+//     </View>
+//   );
+// }
 
 const styles = StyleSheet.create({
   container: {
@@ -32,4 +42,9 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
+  greeting: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    alignItems: 'center'
+  }
 });
