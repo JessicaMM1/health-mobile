@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Button, Alert } from 'react-native';
+import { StyleSheet, Image, Button, Alert, TouchableOpacity } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -23,12 +23,9 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'HomeScree
         <Text style={{ padding: 3, color: 'grey' }}>808 Commonwealth Avenue, Boston</Text>
         <Text style={{ padding: 3, color: 'grey' }}>(617) 123-4567</Text>
       </View>
-      <Button
-        title="Chat"
-        onPress={() => Alert.alert('Function disabled')}
-      />
-
-
+      <TouchableOpacity style={styles.button} onPress={() => Alert.alert('Function disabled')}>
+        <Text style={{ fontSize: 20 }}>Chat</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -66,7 +63,7 @@ const styles = StyleSheet.create({
   },
   texts: {
     fontSize: 30,
-    top: 30,
+    top: 20,
     alignSelf: 'stretch',
     paddingLeft: 30,
     marginBottom: 50
@@ -74,13 +71,21 @@ const styles = StyleSheet.create({
   info: {
     alignItems: 'center',
     padding: 5,
-    marginTop: 15,
     marginBottom: 25,
     backgroundColor: 'whitesmoke',
     borderRadius: 10,
     shadowOpacity: 80,
     shadowRadius: 5,
     shadowColor: 'grey'
+  },
+  button: {
+    alignItems: 'center',
+    width: '40%',
+    // backgroundColor: '#007AFF',
+    backgroundColor: 'lightskyblue',
+    padding: 10,
+    marginTop: 10,
+    borderRadius: 15
   }
 
 });
