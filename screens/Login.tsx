@@ -1,6 +1,7 @@
-import { Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { FontAwesome } from '@expo/vector-icons';
+import * as GoogleSignIn from 'expo-google-sign-in';
 
 export default function LoginScreen() {
 
@@ -9,14 +10,14 @@ export default function LoginScreen() {
             {/* <Text>Hello !</Text>
             <Text>Hello !</Text> */}
 
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => Alert.alert('Google Log in')}>
                 <FontAwesome
                     name="google"
                     size={25}
                     color='white'
                     style={{ marginRight: 10 }}
                 />
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'white' }}>Log In</Text>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'white' }} >Log In</Text>
             </TouchableOpacity>
 
         </View>
