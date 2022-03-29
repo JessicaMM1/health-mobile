@@ -8,7 +8,7 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'HomeScree
   return (
     <View style={styles.container}>
       {/* <Text style={styles.title}>Tab One Hello</Text> */}
-      <Greeting name='Patient 1' />
+      <Greeting name='Patient ' />
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.texts}>My doctor</Text>
 
@@ -19,9 +19,9 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'HomeScree
           }}
           style={{ width: 200, height: 200 }}
         />
-        <Text>Juana Banana</Text>
-        <Text>808 Commonwealth Avenue, Boston</Text>
-        <Text>617 123 4567</Text>
+        <Text style={{ fontSize: 25, paddingBottom: 10 }}>Juana Banana</Text>
+        <Text style={{ padding: 3, color: 'grey' }}>808 Commonwealth Avenue, Boston</Text>
+        <Text style={{ padding: 3, color: 'grey' }}>(617) 123-4567</Text>
       </View>
       <Button
         title="Chat"
@@ -72,7 +72,15 @@ const styles = StyleSheet.create({
     marginBottom: 50
   },
   info: {
-    alignSelf: 'center'
+    alignItems: 'center',
+    padding: 5,
+    marginTop: 15,
+    marginBottom: 25,
+    backgroundColor: 'whitesmoke',
+    borderRadius: 10,
+    shadowOpacity: 80,
+    shadowRadius: 5,
+    shadowColor: 'grey'
   }
 
 });
